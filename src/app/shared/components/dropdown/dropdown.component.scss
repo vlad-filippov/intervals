@@ -1,0 +1,38 @@
+$borderColor: #ccc;
+$arrowBackgroundColor: #369;
+$borderRadius: 0.188rem;
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0.063rem solid $borderColor;
+  border-radius: $borderRadius;
+  outline: none;
+  padding: 0.313rem 1.25rem 0.313rem 0.313rem;
+  position: relative;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.custom-dropdown {
+  position: relative;
+  width: 18rem;
+}
+
+.custom-dropdown:after {
+  background-color: $arrowBackgroundColor;
+  border-radius: 0 $borderRadius $borderRadius 0;
+  color: white;
+  content: '▼';
+  display: block;
+  font-size: 0.625rem;
+  width: 1.563rem;
+  padding: 0.625rem 0;
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  bottom: 0;
+  text-align: center;
+  right: 0;
+}

@@ -1,0 +1,5 @@
+<div class='custom-dropdown'>
+  <select #intervalSelect (change)='setInterval.emit(intervalSelect.value)' id="custom-dropdown">
+    <option *ngFor='let option of dropdownOptions' [value]="option.value">{{option.label}}</option>
+  </select>
+</div>

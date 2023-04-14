@@ -1,0 +1,11 @@
+<div class="dropdown-area">
+  <app-dropdown (setInterval)="setInterval($event)"></app-dropdown>
+</div>
+
+<div class="interval-grid" appSmartShadows>
+  <div *ngFor="let day of intervalDays; trackBy: trackByFn; let isFirst = first;" class="interval-grid__row">
+    <div *ngFor="let interval of day; trackBy: trackByFn" class="interval-grid__col">
+      {{ isFirst ? (interval.time | date: 'HH:mm') : (interval.value) }}
+    </div>
+  </div>
+</div>
